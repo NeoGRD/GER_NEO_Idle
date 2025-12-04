@@ -6,11 +6,8 @@ public class GoldManager : MonoBehaviour
 {
     public int goldAmount;
     public int power;
-    public TextMeshProUGUI goldText;
-    public TextMeshProUGUI powerText;
-    public TextMeshProUGUI priceText;
     public int price;
-
+ 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,18 +29,33 @@ public class GoldManager : MonoBehaviour
             power += 1;
         }
     }
+
+    public void Build5()
+    {
+        ChangePower();
+        ChangePower();
+        ChangePower();
+        ChangePower();
+        ChangePower();
+    }
+
+    public void Build10()
+    {
+        ChangePower();
+        ChangePower();
+        ChangePower();
+        ChangePower();
+        ChangePower();
+        ChangePower();
+        ChangePower();
+        ChangePower();
+        ChangePower();
+        ChangePower();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        goldText.text = goldAmount.ToString("00");
-        powerText.text = power.ToString("00");
-        priceText.text = $"Price :{price}";
-
-    }
-
-    public void buyFive()
-    {
-
-    }
-   
+    
+    }  
 }
